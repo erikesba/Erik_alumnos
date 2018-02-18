@@ -1,0 +1,40 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{chat.name}}">
+  <ion-content class="padding">
+    
+        <div class="list" ng-show="!no_hay">
+              <label class="item item-input item-floating-label">
+                <span class="input-label">Nombres</span>
+                <input type="text" ng-model="alumnos.nombres" placeholder="Nombres">
+              </label>
+              <label class="item item-input item-floating-label">
+                <span class="input-label">Apellidos</span>
+                <input type="text" ng-model="alumnos.apellidos" placeholder="Apellidos">
+              </label>
+              <label class="item item-input item-floating-label">
+                <span class="input-label">Sexo</span>
+                <input type="text" ng-model="alumnos.sexo" placeholder="Sexo">
+              </label>
+              <label class="item item-input item-floating-label">
+                <span class="input-label">Fecha_nacimiento</span>
+                <input type="text" ng-model="alumnos.fecha_nac" placeholder="Fecha_nacimiento  DD/MM/AAAA">
+              </label>
+              <label class="item item-input item-floating-label">
+                <span class="input-label">Paz y salvo?</span>
+                <ion-radio ng-model="alumnos.pazysalvo" ng-value="'1'">Si</ion-radio>
+                <ion-radio ng-model="alumnos.pazysalvo" ng-value="'0'">No</ion-radio>
+              </label>
+                   <button ng-click="ActuAlumno(alumnos.nombres, alumnos.apellidos, alumnos.sexo, alumnos.fecha_nac, alumnos.pazysalvo)" class="button button-block button-positive">
+                        Actualizar
+                      </button>
+        </div>        
+                 
+  </ion-content>
+</ion-view>
+
+
